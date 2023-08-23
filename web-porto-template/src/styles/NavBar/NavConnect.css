@@ -1,0 +1,25 @@
+nav div.connect {
+  border: 1px solid white;
+  position: relative;
+  overflow: hidden;
+}
+
+nav div.connect::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "Let's connect";
+  color: black;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  top: 0%;
+  background-color: white;
+  position: absolute;
+  transition: transform 0.5s ease;
+  font-weight: 700;
+}
+
+nav div.connect:hover::before {
+  transform: translateX(100%);
+}
