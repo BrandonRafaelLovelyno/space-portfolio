@@ -1,0 +1,24 @@
+div.main,
+div.before-button {
+  display: inline-block;
+  position: relative;
+  border: 3px solid white;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  vertical-align: middle;
+}
+
+div.before-button {
+  content: "";
+  position: absolute;
+  background-color: white;
+  transform: scale(0);
+  transition: 0.5s ease-out;
+}
+
+div.main:hover .before-button {
+  transform: scale(1);
+  animation-fill-mode: forwards;
+}

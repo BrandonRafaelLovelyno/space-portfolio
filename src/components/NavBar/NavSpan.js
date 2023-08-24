@@ -1,15 +1,21 @@
+//Importing assest
+import github from "../../assets/images/github-icon.svg";
+import facebook from "../../assets/images/facebook-icon.svg";
+import instagram from "../../assets/images/instagram-icon.svg";
+import githubAfter from "../../assets/images/github-icon-after.svg";
+import facebookAfter from "../../assets/images/facebook-icon-after.svg";
+import instagramAfter from "../../assets/images/instagram-icon-after.svg";
+
+//Importing custom components
+import FillButton from "../FillButton";
+
 function NavSpan() {
   return (
-    <span className="navbar-text">
-      <div className="media-social">
-        <div className="single-media-social p-1 insta-icon">
-        </div>
-        <div className="single-media-social p-1 github-icon">
-        </div>
-        <div className="single-media-social p-1 facebook-icon">
-        </div>
-      </div>
-    </span>
+    <div className="icons">
+      <FillButton mainImage={github} afterImage={githubAfter} width={40} height={40} />
+      <FillButton mainImage={facebook} afterImage={facebookAfter} width={40} height={40} />
+      <FillButton mainImage={instagram} afterImage={instagramAfter} width={40} height={40} />
+    </div>
   );
 }
 

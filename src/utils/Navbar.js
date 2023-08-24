@@ -9,6 +9,7 @@ function windowUnscroll(handleScroll){
 function handleScroll(setScrolled) {
     if (window.scrollY > 50) {
       setScrolled(true);
+      console.log('scrolled')
     } else {
       setScrolled(false);
     }

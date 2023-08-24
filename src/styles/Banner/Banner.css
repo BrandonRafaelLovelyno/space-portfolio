@@ -1,0 +1,35 @@
+section[id="banner"] {
+  padding-top: 200px;
+  background-image: url("../../assets/images/banner-bg.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-weight: 700;
+}
+
+div span.greeting {
+  padding: 3px 10px;
+  border: 1px solid white;
+  background: linear-gradient(
+    90.21deg,
+    rgba(170, 54, 124, 0.5) -5.91%,
+    rgba(74, 47, 189, 0.5) 111.58%
+  );
+}
+
+div div.slider-container {
+  width: 50%;
+}
+
+div h1.typing-text {
+  margin-top: 20px;
+}
+
+div h1.typing-text>span{
+  border-right: 0.08em solid #666;;
+}
+
+div p.sub-text {
+  margin: 30px 0px;
+  color: grey;
+}

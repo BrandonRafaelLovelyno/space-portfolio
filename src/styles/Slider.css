@@ -1,14 +1,14 @@
-nav div.connect {
+div.slider {
+  display: inline-block;
   border: 1px solid white;
   position: relative;
   overflow: hidden;
 }
 
-nav div.connect::before {
+div.slider div.slider-before {
   display: flex;
   align-items: center;
   justify-content: center;
-  content: "Let's connect";
   color: black;
   width: 100%;
   height: 100%;
@@ -20,6 +20,6 @@ nav div.connect::before {
   font-weight: 700;
 }
 
-nav div.connect:hover::before {
+div.slider:hover div.slider-before {
   transform: translateX(100%);
 }

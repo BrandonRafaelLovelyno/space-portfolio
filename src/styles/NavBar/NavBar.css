@@ -1,6 +1,7 @@
 nav {
-  position: fixed;
+  position: fixed !important;
   padding: 40px 0 !important;
+  width:100%;
   transition: 0.32s ease-in-out;
   letter-spacing: 2px;
   font-weight: 700;
@@ -8,7 +9,6 @@ nav {
 }
 
 nav.scrolled {
-  padding: 0px;
   background-color: #121212;
 }
 
@@ -27,4 +27,15 @@ nav a.navbar-brand img {
   width: 100%;
 }
 
+nav .nav-link {
+  margin-right: 20px;
+}
 
+nav div.icons{
+  display: flex;
+  gap: 10px;
+}
+
+nav div.slider{
+  margin-left: 40px;
+}

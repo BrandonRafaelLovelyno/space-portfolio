@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container";
 import NavLink from "./NavLink";
 import Navbar from "react-bootstrap/Navbar";
 import NavSpan  from "./NavSpan";
-import NavConnect from "./NavConnect";
+import Slider from "../Slider";
 
 //Personal assets import
 import logo from "../../assets/images/logo.svg";
@@ -16,8 +16,6 @@ import {windowScroll,windowUnscroll,handleScroll} from '../../utils/Navbar'
 
 //CSS file import
 import '../../styles/NavBar/NavBar.css'
-import '../../styles/NavBar/NavConnect.css'
-import '../../styles/NavBar/NavLink.css'
 
 function NavBar() {
   const [activeLink, setActiveLink] = useState("home");
@@ -42,10 +40,10 @@ function NavBar() {
           <span className="navbar-toggler-icon"></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
-          <NavLink activeLink={activeLink} setActiveLink={setActiveLink} />
+          <NavLink/>
         </Navbar.Collapse>
         <NavSpan/>
-        <NavConnect/>
+        <Slider text={"Let's connect"}/>
       </Container>
     </Navbar>
   );
