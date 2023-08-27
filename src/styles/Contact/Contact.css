@@ -1,0 +1,51 @@
+section[id="contact"] {
+  padding-top: 80px;
+  background: linear-gradient(
+    90.21deg,
+    rgba(170, 54, 124, 0.5),
+    rgba(74, 47, 189, 0.5)
+  );
+}
+
+section[id="contact"] h1 {
+  margin-bottom: 30px;
+}
+
+section[id="contact"] div.image-col {
+  padding-right: 30px;
+  padding-top: 30px;
+}
+
+section[id="contact"] div.form-col {
+  margin-bottom: 5px;
+  padding: 0px 3px;
+}
+
+section[id="contact"] textarea {
+  width: 100%;
+  padding: 13px 10px;
+  border-radius: 15px;
+  border: 2px rgba(225, 225, 225, 0.2) solid;
+  background-color: transparent;
+  color: white;
+  font-weight: 400;
+  transition: 0.2s ease;
+  outline: none;
+}
+
+section[id="contact"] textarea::placeholder {
+  color: rgba(225, 225, 225, 0.8);
+}
+
+section[id="contact"] textarea:focus {
+  padding: 13px 14px;
+}
+
+section[id='contact'] div.send-col{
+    margin-top: 20px;
+    padding-left: 0px;
+}
+
+section[id='contact'] div.send-slider div.slider{
+    width: 100%;
+}

@@ -1,0 +1,26 @@
+section[id="projects"]{
+    margin-top: 80px;
+}
+
+section[id='projects'] div.container{
+    text-align: center;
+    border-radius: 10px;
+    background-color:  #151515;;
+    padding:10% 10%;
+    padding-top: 50px;
+}
+
+section[id='projects'] p.section-sub-text{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color: grey;
+    line-height: 1.5;
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+section[id='projects'] div.grid-container{
+    position: relative;
+    height: 400px;
+}
+

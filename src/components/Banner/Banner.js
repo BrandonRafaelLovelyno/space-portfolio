@@ -14,7 +14,7 @@ import { useState,useEffect } from "react";
 //Importing components
 import Slider from '../Slider'
 
-function Banner({toRotate,greeting}) {
+function Banner({toRotate,greeting,isExtended}) {
     const [wordIndex,setWordIndex]=useState(0);
     const [delta,setDelta]=useState(0)
     const [text,setText]=useState('');
@@ -26,13 +26,15 @@ function Banner({toRotate,greeting}) {
     }, [text]);
 
   return (
-    <section id="banner">
+    <section id="banner" className={isExtended&&'extended'}>
       <Container>
         <Row>
           <Col xs={12} md={7}>
             <div>
                 <span className="greeting">{greeting}</span> 
+                <div className="typing-container">
                 <h1 className="typing-text">Hello there! I'm Brandon as a <span>{text}</span></h1>
+                </div>
                 <p className="sub-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Ipsum.</p>
             </div>
             <div className="slider-container">

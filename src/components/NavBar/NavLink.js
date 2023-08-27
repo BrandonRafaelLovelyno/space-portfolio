@@ -1,9 +1,8 @@
 import Nav from "react-bootstrap/Nav";
-import { useEffect, useState } from "react";
 
 function NavLink({setActiveLink,activeLink}) {
   return (
-    <Nav className="me-auto ms-5">
+    <Nav className="me-auto ms-5 navbar-link">
       <Nav.Link
         href="#home"
         className={activeLink === "home" && "active"}
@@ -25,6 +24,7 @@ function NavLink({setActiveLink,activeLink}) {
       >
         Projects
       </Nav.Link>
+      
     </Nav>
   );
 }

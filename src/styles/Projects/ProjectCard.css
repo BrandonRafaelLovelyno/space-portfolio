@@ -1,0 +1,41 @@
+section[id='projects'] div.image-container{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 150px;
+}
+
+section[id='projects'] div.image-container div.before{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    top: -100%;
+    opacity: 0.9;
+    transition: 0.3s ease-in-out;
+}
+
+section[id='projects'] div.image-container:hover div.before{
+    transform: translateY(100%);
+}
+
+section[id='projects'] div.container div.before h1.before-heading{
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+section[id='projects'] div.container div.before p.before-main-text{
+    font-size: 0.5rem;
+    font-weight: 500;
+}
+
+section[id='projects'] div.container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+}
