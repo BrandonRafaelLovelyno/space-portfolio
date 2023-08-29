@@ -21,8 +21,13 @@ nav div.cont {
   justify-content: start;
 }
 
-nav .navbar-brand {
+nav a.navbar-brand img{
   max-width: 70px;
+  transition: 0.3s ease-in-out;
+}
+
+nav.scrolled a.navbar-brand img{
+  transform: rotateY(360deg);
 }
 
 nav a.navbar-brand img {

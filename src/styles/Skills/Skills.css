@@ -30,6 +30,10 @@ section[id='skills'] div.circular-container{
     padding-top: 30px;
 }
 
+section[id='skills'] div.none{
+    transform:scale(0);
+}
+
 section[id='skills'] div.circular-container text{
     font-family: 'Catamaran';
     font-weight: 700;

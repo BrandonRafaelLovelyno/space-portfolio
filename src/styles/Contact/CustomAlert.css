@@ -1,0 +1,22 @@
+section[id='contact'] div.alert-container>div{
+    margin-top: 40px;
+    background-color: transparent;
+    color: white;
+    transition: 0.3s ease-in;
+}
+
+section[id='contact'] div.alert-container{
+    width: 100%;
+    animation: upDown 3s linear infinite;
+}
+
+section[id='contact'] div.alert{
+    background-color: transparent;
+    color: white;
+}
+
+section[id='contact'] div.alert li{
+    font-weight: 300;
+    color: rgba(225, 225, 225, 0.8);
+}
+

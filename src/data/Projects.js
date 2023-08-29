@@ -1,23 +1,26 @@
+//Importing the image
+import comingSoon from '../assets/images/coming-soon.jpg'
+
 const done=[
     {
         title:'Sea Cinema',
         text:'Flutter mobile cinema application',
-        imageUrl:'static/media/coming-soon.9e48e856112ab4dff030.jpg',
+        imageUrl:comingSoon,
     },
     {
         title:'Yelp Camp',
         text:'MERN Website for campgrounds',
-        imageUrl:'	static/media/coming-soon.9e48e856112ab4dff030.jpg',
+        imageUrl:comingSoon,
     },
     {
         title:'Weather App',
         text:'A simple website for tracking the current week weather',
-        imageUrl:'	static/media/coming-soon.9e48e856112ab4dff030.jpg',
+        imageUrl:comingSoon,
     },
     {
         title:'Web Portofolio Template',
         text:'This website',
-        imageUrl:'	static/media/coming-soon.9e48e856112ab4dff030.jpg',
+        imageUrl:comingSoon,
     },
 ]
 
@@ -25,8 +28,8 @@ const toBeDone=[
     {
         title:'SEO Blog',
         text:'A website for blog sharing',
-        imageUrl:'	static/media/coming-soon.9e48e856112ab4dff030.jpg',
+        imageUrl:comingSoon,
     },
 ]
 
-module.exports={done,toBeDone}
+export {done,toBeDone};

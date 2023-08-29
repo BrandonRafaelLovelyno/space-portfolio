@@ -18,7 +18,6 @@ function CustomTabs() {
         {done.map((p)=><ProjectCard imageUrl={p.imageUrl} text={p.text} title={p.title}/>)}
       </Tab>
       <Tab eventKey="done-2" title="Second">
-        Stay tune
       </Tab>
       <Tab eventKey="to-be-done" title="To be done">
       {toBeDone.map((p)=><ProjectCard imageUrl={p.imageUrl} text={p.text} title={p.title}/>)}

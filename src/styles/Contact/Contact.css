@@ -5,6 +5,7 @@ section[id="contact"] {
     rgba(170, 54, 124, 0.5),
     rgba(74, 47, 189, 0.5)
   );
+  transition: 0.5s ease-out;
 }
 
 section[id="contact"] h1 {
@@ -14,6 +15,20 @@ section[id="contact"] h1 {
 section[id="contact"] div.image-col {
   padding-right: 30px;
   padding-top: 30px;
+}
+
+section[id="contact"] div.image-col div.img-container{
+  min-height: 300px;
+}
+
+section[id="contact"] div.image-col div.img-container div.zoom-container{
+  display: flex;
+  justify-content: center;
+}
+
+section[id="contact"] div.image-col img{  
+  max-width: 100%;
+  animation: upDown 4s linear infinite;
 }
 
 section[id="contact"] div.form-col {
@@ -47,5 +62,36 @@ section[id='contact'] div.send-col{
 }
 
 section[id='contact'] div.send-slider div.slider{
-    width: 100%;
+    width: 60%;
+    font-weight: 600;
+    text-align: center;
+}
+
+section[id='contact'] div.alert-col{
+  padding-left: 0px;
+  font-weight: 400;
+  line-height: 2rem;
+  letter-spacing: 0.15rem;
+}
+
+section[id='contact'] div.alert-placeholder{
+  height: 300px;
+}
+
+section[id='contact'] div.alert-col div.alert-container{
+  height: 370px;
+  width: 100%;
+}
+
+@media (max-width:992px){
+  
+  section[id='contact'] div.image-col img{
+    width: 80%;
+  }
+
+  section[id='contact'] div.image-col{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
 }

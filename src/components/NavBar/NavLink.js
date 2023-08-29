@@ -11,14 +11,14 @@ function NavLink({setActiveLink,activeLink}) {
         Home
       </Nav.Link>
       <Nav.Link
-        href="#skill"
+        href="#skills"
         className={activeLink === "skill" && "active"}
         onClick={() => setActiveLink("skill")}
       >
         Skill
       </Nav.Link>
       <Nav.Link
-        href="#project"
+        href="#projects"
         className={activeLink === "project" && "active"}
         onClick={() => setActiveLink("project")}
       >

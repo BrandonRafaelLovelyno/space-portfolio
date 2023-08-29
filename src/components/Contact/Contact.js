@@ -1,5 +1,5 @@
 //Importing the hooks
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 //Importing react bootstrap components
 import { Container, Row, Col } from "react-bootstrap";
@@ -7,22 +7,47 @@ import { Container, Row, Col } from "react-bootstrap";
 //Importing the styles
 import "../../styles/Contact/Contact.css";
 
+//Importing utilities
+import addObserver from "../../utils/observer";
+
 //Importing custom components
 import FormInput from "./FormInput";
 import Slider from "../Slider";
+import CustomAlert from "./CustomAlert";
 
 //Importing the assets
 import mainImage from "../../assets/images/contact-img.svg";
 
+//Importing the utilities
+import { initValue, sendEmail } from "../../utils/Contact";
+
 function Contact() {
-  const initValue = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    topic: "",
-    message: "",
-  };
+  //Intersection requirement
+  const [notifVisible, setNotifVisible] = useState(false);
+  const [imgVisible, setimgVisible] = useState(false);
+  const notifRef = useRef();
+  const imgRef = useRef();
+
+  useEffect(() => {
+    addObserver(imgRef.current, setimgVisible);
+    addObserver(notifRef.current, setNotifVisible);
+  }, []);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setimgVisible(imgVisible);
+      setNotifVisible(notifVisible);
+    }, 300);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [imgVisible, notifVisible]);
+
+  //Form requirement
   const [formValue, setFormValue] = useState(initValue);
+  const [buttonText, setButtonText] = useState("Send");
+  const [status, setStatus] = useState({});
   const changeHandler = (field, target) => {
     setFormValue((obj) => {
       return { ...obj, [field]: target };
@@ -34,7 +59,16 @@ function Contact() {
         <form>
           <Row>
             <Col className="image-col" md={12} lg={6}>
-              <img src={mainImage} className="img-fluid" />
+              <div className="img-container" ref={imgRef}>
+                <div
+                  className={
+                    imgVisible &&
+                    "animate__animated animate__zoomIn zoom-container"
+                  }
+                >
+                  <img src={mainImage} />
+                </div>
+              </div>
             </Col>
             <Col md={12} lg={6} className="form-col">
               <h1>Contact me!</h1>
@@ -85,8 +119,31 @@ function Contact() {
                   ></textarea>
                 </Col>
                 <Col sm={6} className="send-col">
-                  <div className="send-slider">
-                    <Slider text={"Send"} />
+                  <div
+                    className="send-slider"
+                    onClick={() => {
+                      sendEmail(formValue, setStatus, setButtonText);
+                    }}
+                  >
+                    <Slider text={buttonText} />
+                  </div>
+                </Col>
+                <Col sm={12} className="alert-col" ref={notifRef}>
+                <div className="alert-placeholder">
+                  {status.message && (
+                    <div
+                      className={
+                        notifVisible && "animate__animated animate__fadeInUp"
+                      }
+                    >
+                      <div className="alert-container">
+                        <CustomAlert
+                          status={status.status}
+                          message={status.message}
+                        />
+                      </div>
+                    </div>
+                  )}
                   </div>
                 </Col>
               </Row>

@@ -44,6 +44,11 @@ section[id="banner"] div p.sub-text {
   color: grey;
 }
 
+section[id="banner"] div.image-col{
+  display: flex;
+  justify-content: center;
+}
+
 section[id="banner"] img.main-image{
   padding-top: 20px;
   animation: upDown 4s linear infinite;
